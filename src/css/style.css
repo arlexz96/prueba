@@ -11,8 +11,9 @@ fecha: 08/04/2024 */
 :root{
     --negro: rgb(0, 0, 0);
     --blanco: #f1f1f1;
-    --borde_izquierdo:border-right: 5px solid blue;
-    --borde_derecho:border-left: 5px solid red;
+    --borde_derecho: 5px solid blue;
+    --borde_izquierdo: 5px solid red;
+    --letra:'Neue Haas Grotesk Display Pro', sans-serif;
 }
 body{
     background: url(../../public/video/background-glitch.mp4);
@@ -23,32 +24,31 @@ nav{
     display: flex;
     justify-content: space-between;
     margin: 15px;
+    padding: 5px;
 }
-
 nav a{
     text-decoration: none;
     color: var(--blanco);
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-family: var(--letra);
     font-weight: 600;
+    font-size: 22px;
 }
-
 #logo{
-    width: 200px;
+    width: 250px;
 }
-
 #contenido-nav{
     display: flex;
     align-items: center;
     gap: 20px;
     padding-left: 20px;
 }
-
 #iconos{
-    color: white;
+    color: var(--blanco);
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     padding-right: 20px;
+    font-size: 25px;
 }
 /* este es el main */
 #placebo-portada{
@@ -57,49 +57,214 @@ nav a{
 }
 /* seccion de opciones watch,tour,order,listen */
 .primeras-imagenes{
-    width: 200px;
-    height: 150px;
+    width: 400px;
+    height: 250px;
 }
-
 h2{
-    color: white;
+    color: var(--blanco);
+    font-size: 40px;
+    font-family: var(--letra);
 }
-
 .seccion-opciones{
     display: flex;
     justify-content: space-around;
     margin-top: 10%;
 }
-
 .contenedor-imagenes{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .segundas-imagenes{
-    width: 200px;
+    width: 400px;
 }
-
 span{
-    color: white;
+    color: var(--blanco);
+    font-family: var(--letra);
 }
 /* seccion de tienda */
 .contenedor-imagenes-tienda{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: calc(20% - 0px);
+    justify-content: space-between;
+    gap: 10px;
 }
 #seccion-tienda{
     display: flex;
     justify-content: center;
-    margin-top: 10%;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 40px;
 }
-
 .imagenes-tienda{
-    width: 200px;
-    height: 150px;
+    width: 400px;
+    margin-top: 50%;
+}
+.contenedor-imagenes-tienda a{
+    color: var(--blanco);
+}
+.contenedor-imagenes-tienda button{
+    padding: 12px 15px;
+    border-radius: 20px;
+    background-color: var(--blanco);
+    font-size: 18px;
+    font-family: var(--letra);
+    border-color: var(--blanco);
+}
+.contenedor-imagenes-tienda button:hover{
+    cursor: pointer;
+    opacity: .8;
+    padding: 12px 17px;
+    border-left: var(--borde_izquierdo);
+    border-right: var(--borde_derecho);
+    position: relative;
+    top: 2px;
+    transition: 0.2s ease-in;
+}
+.contenedor-imagenes-tienda button a{
+    color: var(--negro);
+    font-family: var(--letra);
+}
+/* esta es la seccion de conciertos */
+#seccion-conciertos{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+#seccion-conciertos h3{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 40px;
+    font-family: var(--letra);
+}
+#seccion-conciertos p{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 27px;
+    font-family: var(--letra);
+}
+.fecha{
+    color: var(--blanco);
+    font-family: var(--letra);
+}
+.ciudad{
+    color: var(--blanco);
+    font-family: var(--letra);
+}
+#informacion-conciertos{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#informacion-conciertos article{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blanco);
+    padding: 10px;
+    align-items: center;
+}
+#primer-info-concierto{
+    border-top: 1px solid var(--blanco);
+}
+.boton-ticket{
+    padding: 10px 25px;
+    font-family: var(--letra);
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: var(--blanco);
+    border-color: var(--blanco);
+}
+.boton-ticket:hover{
+    cursor: pointer;
+    opacity: .8;
+    padding: 10px 25px;
+    border-left: var(--borde_izquierdo);
+    border-right: var(--borde_derecho);
+    position: relative;
+    top: 2px;
+    transition: 0.2s ease-in;
+}
+.boton-follow{
+    padding: 10px 25px;
+    font-family: var(--letra);
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: var(--blanco);
+    width: 8%;
+    align-self: center;
+    margin-top: 1%;
+    border-color: var(--blanco);
+}
+.boton-follow:hover{
+    cursor: pointer;
+    opacity: .8;
+    padding: 10px 27px;
+    border-left: var(--borde_izquierdo);
+    border-right: var(--borde_derecho);
+    position: relative;
+    top: 2px;
+    transition: 0.2s ease-in;
 }
 /* este es el footer */
+#seccion-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    gap: 7px;
+}
+#seccion-footer h2{
+    color: var(--blanco);
+}
+#seccion-footer p{
+    color: var(--blanco);
+}
+#seccion-footer button{
+    padding: 10px 25px;
+    font-family: var(--letra);
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: var(--blanco);
+    width: 8%;
+    align-self: center;
+    margin-top: 1%;
+    border-color: var(--blanco);
+}
+#seccion-footer button:hover{
+    cursor: pointer;
+    opacity: .8;
+    padding: 10px 27px;
+    border-left: var(--borde_izquierdo);
+    border-right: var(--borde_derecho);
+    position: relative;
+    top: 2px;
+    transition: 0.2s ease-in;
+}
+#seccion-footer i{
+    color: var(--blanco);
+    font-size: 30px;
+}
+#iconos-footer{
+    display: flex;
+    gap: 40px;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+#info-footer{
+    display: flex;
+    gap: 60px;
+    font-family: var(--letra);
+    padding: 10px;
+}
+#info-footer ul{
+    color: var(--blanco);
+    display: flex;
+    gap: 60px;
+    font-family: var(--letra);
+}
